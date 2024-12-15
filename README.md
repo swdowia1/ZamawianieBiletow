@@ -53,7 +53,7 @@ Biblioteka zawiera następujące klasy
       <tr>
          <td>TenantA.cs</td>
          <td>Dla takiego typu klienta zniżki zapisujemy</td>
-         <td>dla takiego klienta w klasie PurchaseService zrwacamy nazwy zniżek </td>
+         <td>dla takiego klienta w klasie PurchaseService zwracamy nazwy zniżek </td>
       </tr>
       <tr>
          <td>TenantB.cs</td>
