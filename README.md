@@ -78,8 +78,8 @@ Testy typu MSTest testujemy następujące przypadki
       
       </tr>
       <tr>
-         <td>Flight.cs</td>
-         <td>Poszczególny lot, między innymi minimalna wartość ceny (poniżej zniżki już nie działają)</td>
+         <td>Kupno_biletu_grupa_a</td>
+         <td>Bilet dla grupy A, gdzie w metodzie PurchaseFlight zwracamy nazwę zniżek</td>
       </tr>
      
    </tbody>

@@ -20,7 +20,7 @@ namespace Tickets.Testy
 
         }
         [TestMethod]
-        public void HeadTest_bezZapisu()
+        public void Kupno_biletu_grupa_b()
         {
 
             var tenantB = new TenantB("Tenant B");
@@ -44,7 +44,7 @@ namespace Tickets.Testy
 
         }
         [TestMethod]
-        public void HeadTest_zapis()
+        public void Kupno_biletu_grupa_a()
         {
             var tenantA = new TenantA("Tenant A");
 
@@ -68,7 +68,7 @@ namespace Tickets.Testy
 
         }
         [TestMethod]
-        public void trzy_z_czeterch()
+        public void dwie_znizki_zapisze_jedna()
         {
             //cena biletu
             var bilet = new Flight("KLM 12345 BCA", "Amsterdam", "Warszawa", DateTime.Now.AddHours(5), new List<DayOfWeek> { DayOfWeek.Thursday }, 84m);
