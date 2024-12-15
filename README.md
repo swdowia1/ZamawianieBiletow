@@ -1,26 +1,13 @@
-# Aplikacja testowa
+# System sprzedaży biletów lotniczych
 
-## Wersja demo
-Aplikacja znajduje się pod adresem [https://swsw.somee.com/](https://swsw.somee.com) <br>
+## Wymagania
+Proszę zaimplementować system sprzedaży biletów lotniczych scharakteryzowany
+poniżej. Interesuje nas tylko implementacja modelu domenowego. Nie musisz
+implementować API i warstwy infrastruktury np. zapis i odczyt z bazy danych.
+Rozwiązanie zadania możesz wrzucić na repozytorium github i podesłać do nas link lub
+podesłać kod źródłowy mailem. Rozwiązanie musi być zgodne z zasadami SOLID.
 
 
-## Autoryzacja
+## Struktura projektu
 Aby wejść do zabezpieczonych stron, należy się potwierdzić tożsamość(Logowanie z Microsoft) <br>
 
-## Pobieranie kursów walut
-Pod adresem [Home/Currency](https://swsw.somee.com/Home/Currency) aplikacja pobiera aktualny kurs walut ze strony [http://api.nbp.pl/](http://api.nbp.pl/)
-
-> [!TIP]
-> Aplikacja korzysta z IMemoryCache. Dane z NBP trzymane są w cache przez 5 minut
- 
- <br>
-
-## Wysyłanie mail
-
-Pod adresem [Home/Mail](https://swsw.somee.com/Home/Mail) znajduje się formualarz do wysłania maila z polami
-- Temat
-- Treść
-- Do kogo(jeśli nie wypełnimy to adresat pobrany bedzię z pliku [appsettings.json](https://github.com/swdowia1/Aplikacja8/blob/master/WebApp/appsettings.json)&rarr;MailTo)
-
-<br>
-Dane do konfiguracji klienta pocztowego znajdują się [tutaj](https://github.com/swdowia1/Aplikacja8/blob/master/WebApp/appsettings.json) &rarr;MailSetting
