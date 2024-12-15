@@ -70,19 +70,18 @@ Biblioteka zawiera następujące klasy
 ## Testowanie
 
 Testy typu MSTest testujemy następujące przypadki
+
 <table>
-   <tbody>
-      <tr>
+        <tr>
          <th>Nazwa metody</th>
-         <th>opis</th>
-      
+         <th>Opia</th>
       </tr>
       <tr>
          <td>Kupno_biletu_grupa_a</td>
          <td>Bilet dla grupy A, gdzie w metodzie PurchaseFlight zwracamy nazwę zniżek</td>
       </tr>
      
-   </tbody>
+
 </table>
 
 
