@@ -11,7 +11,7 @@ Rozwiązanie zadania możesz wrzucić na repozytorium github i podesłać do nas
 podesłać kod źródłowy mailem. Rozwiązanie musi być zgodne z zasadami SOLID.
 
 
-## struktura(Struktura projektu)
+## Struktura projektu
 Aby wejść do zabezpieczonych stron, należy się potwierdzić tożsamość(Logowanie z Microsoft) <br>
 
 ![struktura](https://github.com/user-attachments/assets/dbf70e65-5b5a-47a0-8cfa-2937bc072a32)
