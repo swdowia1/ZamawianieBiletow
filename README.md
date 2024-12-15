@@ -1,6 +1,6 @@
 # Table of Contents
 1. [Wymagania](#wymagania)
-2. [Struktura projektu](#Struktura projektu)
+2. [Struktura projektu](#struktura)
 3. [Third Example](#third-example)
 4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
 
@@ -19,7 +19,7 @@ Rozwiązanie zadania możesz wrzucić na repozytorium github i podesłać do nas
 podesłać kod źródłowy mailem. Rozwiązanie musi być zgodne z zasadami SOLID.
 
 
-## Struktura projektu
+## struktura
 Aby wejść do zabezpieczonych stron, należy się potwierdzić tożsamość(Logowanie z Microsoft) <br>
 
 ![struktura](https://github.com/user-attachments/assets/dbf70e65-5b5a-47a0-8cfa-2937bc072a32)
