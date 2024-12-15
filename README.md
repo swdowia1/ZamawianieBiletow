@@ -2,17 +2,71 @@
 # Spis treści
 1. [Wymagania](#wymagania)
 2. [Struktura projektu](#Struktura-projektu)
+3. [Testowanie](#Testowanie)
+
 
 ## Wymagania
 Proszę zaimplementować system sprzedaży biletów lotniczych scharakteryzowany
-poniżej. Interesuje nas tylko implementacja modelu domenowego. Nie musisz
-implementować API i warstwy infrastruktury np. zapis i odczyt z bazy danych.
-Rozwiązanie zadania możesz wrzucić na repozytorium github i podesłać do nas link lub
-podesłać kod źródłowy mailem. Rozwiązanie musi być zgodne z zasadami SOLID.
+poniżej. Rozwiązanie musi być zgodne z zasadami SOLID.
 
 
 ## Struktura projektu
-Aby wejść do zabezpieczonych stron, należy się potwierdzić tożsamość(Logowanie z Microsoft) <br>
+
 
 ![struktura](https://github.com/user-attachments/assets/dbf70e65-5b5a-47a0-8cfa-2937bc072a32)
+
+Projekt podzielony jest na dwie części:
+ a) Biblioteka
+ b) Testy
+
+Biblioteka zawiera następujące klasy
+<table>
+   <tbody>
+      <tr>
+         <th>Klassa</th>
+         <th>opis</th>
+      </tr>
+      <tr>
+         <td>Flight.cs</td>
+         <td>Poszczególny lot, między innymi minimalna wartość ceny (poniżej zniżki już nie działają)</td>
+      </tr>
+      <tr>
+         <td>FlightPrice.cs</td>
+         <td>Lista cen</td>
+      </tr>
+      <tr>
+         <td>Gender.cs</td>
+         <td>Płeć klienta</td>
+      </tr>
+      <tr>
+         <td>Lot.cs</td>
+         <td>W pliku zawierają klasy do zniżek na podstawie interfejsu IDiscountCriterion</td>
+      </tr>
+      <tr>
+         <td>Person.cs</td>
+         <td>Osoba która ma imie, płeć, datę urodzin</td>
+      </tr>
+      <tr>
+         <td>PurchaseService.cs</td>
+         <td>Klasa która ma listę zniżek oraz wartość zniżki</td>
+      </tr>
+      <tr>
+         <td>Tenant.cs</td>
+         <td>Abstrakcyjna klasa(typ kienta)</td>
+      </tr>
+      <tr>
+         <td>TenantA.cs</td>
+         <td>Dla takiego typu klienta zniżki zapisujemy</td>
+      </tr>
+      <tr>
+         <td>TenantB.cs</td>
+         <td>Dla takiego typu klienta zniżki <b>nie</b> zapisujemy</td>
+      </tr>
+      <tr>
+         <td>TenantGroup.cs</td>
+         <td>Enum-->grupa klientów</td>
+      </tr>
+   </tbody>
+</table>
+
 
