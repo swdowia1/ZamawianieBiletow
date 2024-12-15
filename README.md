@@ -1,16 +1,11 @@
 # System sprzedaży biletów lotniczych
-# Spis treści
-1. [Wymagania](#wymagania)
-2. [Struktura projektu](#Struktura-projektu)
-3. [Testowanie](#Testowanie)
-
 
 ## Wymagania
 Proszę zaimplementować system sprzedaży biletów lotniczych scharakteryzowany
 poniżej. Rozwiązanie musi być zgodne z zasadami SOLID.
 
 
-## Struktura projektu
+## Struktura
 
 
 ![struktura](https://github.com/user-attachments/assets/dbf70e65-5b5a-47a0-8cfa-2937bc072a32)
@@ -25,6 +20,7 @@ Biblioteka zawiera następujące klasy
       <tr>
          <th>Klassa</th>
          <th>opis</th>
+         <th>dodatkowe</th>
       </tr>
       <tr>
          <td>Flight.cs</td>
@@ -57,6 +53,7 @@ Biblioteka zawiera następujące klasy
       <tr>
          <td>TenantA.cs</td>
          <td>Dla takiego typu klienta zniżki zapisujemy</td>
+         <td>dla takiego klienta w klasie PurchaseService zrwacamy nazwy zniżek </td>
       </tr>
       <tr>
          <td>TenantB.cs</td>
@@ -66,6 +63,25 @@ Biblioteka zawiera następujące klasy
          <td>TenantGroup.cs</td>
          <td>Enum-->grupa klientów</td>
       </tr>
+   </tbody>
+</table>
+
+
+## Testowanie
+
+Testy typu MSTest testujemy następujące przypadki
+<table>
+   <tbody>
+      <tr>
+         <th>Nazwa metody</th>
+         <th>opis</th>
+      
+      </tr>
+      <tr>
+         <td>Flight.cs</td>
+         <td>Poszczególny lot, między innymi minimalna wartość ceny (poniżej zniżki już nie działają)</td>
+      </tr>
+     
    </tbody>
 </table>
 
