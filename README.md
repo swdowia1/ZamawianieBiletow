@@ -1,7 +1,7 @@
 # System sprzedaży biletów lotniczych
 # Spis treści
 1. [Wymagania](#wymagania)
-2. [Struktura projektu](#struktura)
+2. [Struktura projektu](#Struktura-projektu)
 
 ## Wymagania
 Proszę zaimplementować system sprzedaży biletów lotniczych scharakteryzowany
