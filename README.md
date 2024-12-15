@@ -80,7 +80,19 @@ Testy typu MSTest testujemy następujące przypadki
          <td>Kupno_biletu_grupa_a</td>
          <td>Bilet dla grupy A, gdzie w metodzie PurchaseFlight zwracamy nazwę zniżek</td>
       </tr>
-     
+    
+     <tr>
+         <td> Kupno_biletu_grupa_b</td>
+         <td>Bilet dla grupy B, gdzie w metodzie PurchaseFlight <b>nie</b> zwracamy nazwę zniżek</td>
+      </tr>
+      <tr>
+      <td>
+      dwie_znizki_zapisze_jedna
+      </td>
+       <td>
+      Pomimo że są dwie zniżki to zapiszę jedną bo cena była mniejsza
+      </td>
+      </tr>
 
 </table>
 
