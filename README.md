@@ -18,7 +18,7 @@ Biblioteka zawiera następujące klasy
 <table>
    <tbody>
       <tr>
-         <th>Klassa</th>
+         <th>Klasa</th>
          <th>opis</th>
          <th>dodatkowe</th>
       </tr>
@@ -40,7 +40,7 @@ Biblioteka zawiera następujące klasy
       </tr>
       <tr>
          <td>Person.cs</td>
-         <td>Osoba która ma imie, płeć, datę urodzin</td>
+         <td>Osoba która ma imię, płeć, datę urodzin</td>
       </tr>
       <tr>
          <td>PurchaseService.cs</td>
@@ -78,7 +78,7 @@ Testy typu MSTest testujemy następujące przypadki
       </tr>
       <tr>
          <td>Buy_Ticket_GroupA</td>
-         <td>Bilet dla grupy A, gdzie w metodzie PurchaseFlight zwracamy nazwę zniżek</td>
+         <td>Bilet dla grupy A, gdzie w metodzie PurchaseFlight zwracamy nazwy zniżek</td>
       </tr>    
      <tr>
          <td>Buy_Ticket_GroupB</td>
