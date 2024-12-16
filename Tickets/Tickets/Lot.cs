@@ -11,14 +11,21 @@ namespace Tickets
     {
         bool IsApplicable(Flight flight, DateTime purchaseDate, Person p);
     }
-    public class Konczy_na_a_Criterion : IDiscountCriterion
+    public class EndsA_Criterion : IDiscountCriterion
     {
         public bool IsApplicable(Flight flight, DateTime purchaseDate, Person p)
         {
             return flight.To.EndsWith("a");
         }
     }
-    public class bilet_na_dziecko_Criterion : IDiscountCriterion
+    public class Africa_Criterion : IDiscountCriterion
+    {
+        public bool IsApplicable(Flight flight, DateTime purchaseDate, Person p)
+        {
+            return flight.To == "Africa";
+        }
+    }
+    public class Children_Criterion : IDiscountCriterion
     {
         public bool IsApplicable(Flight flight, DateTime purchaseDate, Person p)
         {
@@ -26,11 +33,14 @@ namespace Tickets
             return age < 18;
         }
     }
-    public class bilet_na_sobota : IDiscountCriterion
+    /// <summary>
+    /// celowo zmokowane na true
+    /// </summary>
+    public class Satrurday_Criterion : IDiscountCriterion
     {
         public bool IsApplicable(Flight flight, DateTime purchaseDate, Person p)
         {
-            return purchaseDate.DayOfWeek == DayOfWeek.Saturday;
+            return true;
         }
     }
     public class BirthdayDiscountCriterion : IDiscountCriterion

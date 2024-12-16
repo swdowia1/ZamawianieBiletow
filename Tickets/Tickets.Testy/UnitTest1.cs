@@ -13,14 +13,14 @@ namespace Tickets.Testy
         Flight _FlightOK;
         public UnitTest1()
         {
-            _FlightOK = new Flight("KLM 12345 BCA", "Amsterdam", "Warszawa", DateTime.Now.AddHours(5), new List<DayOfWeek> { DayOfWeek.Thursday }, 60m);
+            _FlightOK = new Flight("KLM 12345 BCA", "Amsterdam", "Africa", DateTime.Now.AddHours(5), new List<DayOfWeek> { DayOfWeek.Thursday }, 60m);
 
             _FlightOK.AddPrice(DateTime.Now.Date.AddDays(-1), 100);
 
 
         }
         [TestMethod]
-        public void Kupno_biletu_grupa_b()
+        public void Buy_Ticket_GroupB()
         {
 
             var tenantB = new TenantB("Tenant B");
@@ -31,7 +31,7 @@ namespace Tickets.Testy
             var discountCriteria = new List<IDiscountCriterion>
             {
                 new BirthdayDiscountCriterion(),
-                new Konczy_na_a_Criterion(),
+                new EndsA_Criterion(),
                 new GenderDiscountCriterion(Gender.M)
             };
 
@@ -44,18 +44,18 @@ namespace Tickets.Testy
 
         }
         [TestMethod]
-        public void Kupno_biletu_grupa_a()
+        public void Buy_Ticket_GroupA()
         {
             var tenantA = new TenantA("Tenant A");
 
-            Person p = new Person(Gender.M, "janek", 2024, 12, 14);
+            Person p = new Person(Gender.M, "janek", 2024, DateTime.Now.Month, DateTime.Now.Day);
 
 
 
             var discountCriteria = new List<IDiscountCriterion>
             {
                 new BirthdayDiscountCriterion(),
-                new Konczy_na_a_Criterion(),
+                new EndsA_Criterion(),
                 new GenderDiscountCriterion(Gender.M)
             };
 
@@ -68,7 +68,32 @@ namespace Tickets.Testy
 
         }
         [TestMethod]
-        public void dwie_znizki_zapisze_jedna()
+        public void FourCriterion()
+        {
+            var tenantA = new TenantA("Tenant A");
+
+            Person p = new Person(Gender.M, "janek", 2024, DateTime.Now.Month, DateTime.Now.Day);
+
+
+
+            var discountCriteria = new List<IDiscountCriterion>
+            {
+                new BirthdayDiscountCriterion(),
+                new EndsA_Criterion(),
+                new Africa_Criterion(),
+                new GenderDiscountCriterion(Gender.M)
+            };
+
+            var purchaseService = new PurchaseService(discountCriteria, 10);
+
+            var appliedCriteria = new List<string>();
+            decimal finalPrice = purchaseService.PurchaseFlight(tenantA, _FlightOK, DateTime.Now, p, out appliedCriteria);
+            Assert.AreEqual(60m, finalPrice, "spodziewana inni znizka");
+            Assert.AreEqual(4, appliedCriteria.Count, "Powinno być 4 znizki");
+
+        }
+        [TestMethod]
+        public void TwoCriterionSaveOne()
         {
             //cena biletu
             var bilet = new Flight("KLM 12345 BCA", "Amsterdam", "Warszawa", DateTime.Now.AddHours(5), new List<DayOfWeek> { DayOfWeek.Thursday }, 84m);
@@ -82,8 +107,8 @@ namespace Tickets.Testy
 
             var discountCriteria = new List<IDiscountCriterion>
             {
-                new bilet_na_dziecko_Criterion(),
-                new bilet_na_sobota()
+                new Children_Criterion(),
+                new Satrurday_Criterion()
             };
 
             var purchaseService = new PurchaseService(discountCriteria, 10);
@@ -91,7 +116,7 @@ namespace Tickets.Testy
             var appliedCriteria = new List<string>();
             decimal finalPrice = purchaseService.PurchaseFlight(tenantA, bilet, DateTime.Now, p, out appliedCriteria);
             Assert.AreEqual(90m, finalPrice, "spodziewana inni znizka");
-            Assert.AreEqual(1, appliedCriteria.Count, "Powinno być 3 znizki");
+            Assert.AreEqual(1, appliedCriteria.Count, "Na lioście są 2 zniżki ale zapisze 1");
 
         }
         [TestMethod]
