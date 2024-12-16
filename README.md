@@ -74,19 +74,23 @@ Testy typu MSTest testujemy następujące przypadki
 <table>
         <tr>
          <th>Nazwa metody</th>
-         <th>Opia</th>
+         <th>Opis</th>
       </tr>
       <tr>
-         <td>Kupno_biletu_grupa_a</td>
+         <td>Buy_Ticket_GroupA</td>
          <td>Bilet dla grupy A, gdzie w metodzie PurchaseFlight zwracamy nazwę zniżek</td>
       </tr>    
      <tr>
-         <td> Kupno_biletu_grupa_b</td>
+         <td>Buy_Ticket_GroupB</td>
          <td>Bilet dla grupy B, gdzie w metodzie PurchaseFlight <b>nie</b> zwracamy nazwę zniżek</td>
       </tr>
       <tr>
-        <td>dwie_znizki_zapisze_jedna </td>
+        <td>TwoCriterionSaveOne</td>
        <td>Pomimo że są dwie zniżki to zapiszę jedną bo cena była mniejsza</td>
+      </tr>
+      <tr>
+        <td>FourCriterion</td>
+       <td>Test z 4 zniżkami</td>
       </tr>
 
 </table>
